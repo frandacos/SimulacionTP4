@@ -3,9 +3,12 @@ using System;
 
 namespace SimulacionTP4.Servicio
 {
+
+
     public class GestorMontecarlo
     {
         private readonly FrmPrincipal form;
+        private Montecarlo montecarla;
 
         public GestorMontecarlo(FrmPrincipal form)
         {
@@ -30,6 +33,14 @@ namespace SimulacionTP4.Servicio
         private void MostrarResultado()
         {
             throw new NotImplementedException();
+        }
+
+        private void MostrarGrafica()
+        {
+            form.LimpiarGrafica();
+            foreach (string[] fila in montecarla.GetFilasMostrar())
+                form.MostrarGrafica(Convert.ToDouble(fila[0]), Convert.ToDouble(fila[13]));   
+            
         }
 
         private void CalcularMontecarlo()

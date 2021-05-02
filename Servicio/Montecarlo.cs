@@ -8,8 +8,9 @@ namespace SimulacionTP4.Servicio
         private double ganancia;
         private double media;
 
-        public void Calcular(int iteraciones, int diaDesde, int cantidadDiasMostrar, double compra, double venta, double reventa)
-        {
+        public void Calcular(int iteraciones, int diaDesde, int cantidadDiasMostrar, double compra, double venta, double reventa
+            ,bool usaDiaAnterior, double docenasDiaAnterior , double faltantePrecioCompra, bool usaFaltante)
+        {           
             Fila actual, previa, temp;
             Generador generador;
             ProbabilidadClima probabilidadClima = new ProbabilidadClima();
@@ -49,6 +50,7 @@ namespace SimulacionTP4.Servicio
 
         public string[][] GetFilasMostrar()
         {
+            //sacas para la grafica la media es la ultima columna
             return filasMostrar;
         }
 
