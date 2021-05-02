@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using SimulacionTP4.Presentacion;
+using System;
 using System.Windows.Forms;
 
 namespace SimulacionTP4
