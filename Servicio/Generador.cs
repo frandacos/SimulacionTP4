@@ -5,17 +5,20 @@ namespace SimulacionTP4.Servicio
     public class Generador
     {
         private double[] serie;
-        private long semilla;
+        //private long semilla;
+        private readonly Random r;
 
         public Generador()
         {
-            semilla = DateTime.Now.Ticks;
+            //semilla = DateTime.Now.Ticks;
+            r = new Random();
         }
 
         public double GenerarUniforme()
         {
-            semilla = (37845 * semilla + 4194303) % 4194304;
-            return semilla / 4194304;
+            return r.NextDouble();
+            //semilla = (37845 * semilla + 4194303) % 4194304;
+            //return semilla / 4194304;
         }
 
         public double[] GenerarUniforme(double a, double b, int cantidad)

@@ -8,8 +8,8 @@ namespace SimulacionTP4.Servicio
         private double ganancia;
         private double media;
 
-        public void Calcular(int iteraciones, int diaDesde, int cantidadDiasMostrar, double compra, double venta, double reventa
-            ,bool usaDiaAnterior, double docenasDiaAnterior , double faltantePrecioCompra, bool usaFaltante)
+        public void Calcular(int iteraciones, int diaDesde, int cantidadDiasMostrar, double precioCompra, double precioVenta, 
+            double precioReventa, bool usarDemandaAnterior, int docenasComprar, bool comprarFaltante, double precioFaltante)
         {           
             Fila actual, previa, temp;
             Generador generador;
@@ -17,7 +17,7 @@ namespace SimulacionTP4.Servicio
             int diaHasta;
 
             actual = new Fila();
-            previa = new Fila();
+            previa = new Fila { Dia = 0, Demanda = docenasComprar, GananciaAcumulada = 0, Media = 0 };
             generador = new Generador();
             diaHasta = diaDesde + cantidadDiasMostrar;
 
@@ -32,9 +32,32 @@ namespace SimulacionTP4.Servicio
                 actual.RNDDemanda = generador.GenerarUniforme();
                 actual.CalcularDemanda();
 
-                // SEGUIR ACÁ
-                //
-                // ...
+                actual.CantidadCompra = usarDemandaAnterior ? previa.Demanda : docenasComprar;
+                actual.CostoCompra = -precioCompra * actual.CantidadCompra;
+
+                if (actual.Demanda > actual.CantidadCompra) 
+                {
+                    actual.CantidadSobrante = 0;
+
+                    if (comprarFaltante)
+                    {
+                        actual.CantidadVenta = actual.Demanda;
+                        actual.CostoCompra -= precioFaltante * (actual.Demanda - actual.CantidadCompra);
+                    }
+                    else
+                        actual.CantidadVenta = actual.CantidadCompra;
+                }
+                else
+                {
+                    actual.CantidadVenta = actual.Demanda;
+                    actual.CantidadSobrante = actual.CantidadCompra - actual.CantidadVenta;
+                }
+
+                actual.IngresosDiarios = precioVenta * actual.CantidadVenta;
+                actual.CostoSobrante = precioReventa * actual.CantidadSobrante;
+                actual.GananciaDiaria = actual.IngresosDiarios + actual.CostoCompra + actual.CostoSobrante;
+                actual.GananciaAcumulada = actual.GananciaDiaria + previa.GananciaAcumulada;
+                actual.Media = ((actual.Dia - 1) * previa.Media + actual.GananciaDiaria) / actual.Dia;
 
                 if (diaDesde <= i && i <= diaHasta)
                     filasMostrar[i - diaDesde] = actual.GetFila();
@@ -50,7 +73,6 @@ namespace SimulacionTP4.Servicio
 
         public string[][] GetFilasMostrar()
         {
-            //sacas para la grafica la media es la ultima columna
             return filasMostrar;
         }
 

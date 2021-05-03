@@ -4,7 +4,7 @@ namespace SimulacionTP4.Servicio
 {
     public class ProbabilidadClima
     {
-        private IClima soleado, nublado;
+        private readonly IClima soleado, nublado;
 
         public ProbabilidadClima()
         {
