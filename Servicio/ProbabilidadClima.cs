@@ -14,7 +14,12 @@ namespace SimulacionTP4.Servicio
 
         public IClima DeterminarClima(double random)
         {
-            return null;
+            double r = random;
+
+            if (r >= 0.75 && r < 1)
+                return nublado;
+
+            return soleado;
         }
     }
 }

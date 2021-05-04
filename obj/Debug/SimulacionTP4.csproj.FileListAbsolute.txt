@@ -13,3 +13,8 @@ C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP4\bin\Debug\Simulaci
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP4\bin\Debug\SimulacionTP4.pdb
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP4\obj\Debug\SimulacionTP4.exe
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP4\obj\Debug\SimulacionTP4.pdb
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\obj\Debug\SimulacionTP4.exe
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\obj\Debug\SimulacionTP4.pdb
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\bin\Debug\SimulacionTP4.exe.config
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\bin\Debug\SimulacionTP4.exe
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\bin\Debug\SimulacionTP4.pdb

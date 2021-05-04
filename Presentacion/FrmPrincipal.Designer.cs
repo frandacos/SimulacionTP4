@@ -232,6 +232,7 @@
             this.Controls.Add(this.txtIteraciones);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaCalculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficaMedia)).EndInit();
             this.ResumeLayout(false);
