@@ -4,22 +4,10 @@
     {
         public int GetDemanda(double random)
         {
-            double r = random;
-            int demanda = 0;
-
-            if (0.3 <= r && r < 0.75)
-                demanda = 8;
-
-            if (0.75 <= r && r < 1)
-                demanda = 9;
-           
-            if (0.1 <= r && r < 0.3)
-                demanda = 7;
-
-            if (0 <= r && r < 0.1)
-                demanda = 6;
-
-            return demanda;
+            if (random < .1) return 6;
+            if (random < .3) return 7;
+            if (random < .75) return 8;
+            return 9;
         }
 
         public string GetNombre()
