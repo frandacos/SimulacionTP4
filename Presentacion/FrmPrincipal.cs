@@ -20,21 +20,21 @@ namespace SimulacionTP4.Presentacion
         }
         public int GetCompraDocena()
         {
-            return Convert.ToInt32(txtDocenasCompra.Text);
+            return txtDocenasCompra.Valor;
         }
         public int GetDiaDesde()
         {
-            return 0;
+            return txtDiaDesde.Valor;
         }
 
         public int GetIteraciones()
         {
-            return 0;
+            return txtIteraciones.Valor;
         }
 
         public int GetCantidadDiasMostrar()
         {
-            return 0;
+            return txtCantidadDias.Valor;
         }
 
         public void LimpiarGrafica()
@@ -44,12 +44,12 @@ namespace SimulacionTP4.Presentacion
 
         public double GetPrecioCompra()
         {
-            return 0;
+            return txtPrecioCompra.Valor;
         }
 
         public double GetPrecioVenta()
         {
-            return 0;
+            return txtPrecioVenta.Valor;
         }
 
         public void MostrarGrafica(double x, double y)
@@ -60,7 +60,7 @@ namespace SimulacionTP4.Presentacion
 
         public double GetPrecioReventa()
         {
-            return 0;
+            return txtPrecioReventa.Valor;
         }
 
         public void MostrarResultado(string gananciaAcumulada, string media)
@@ -97,7 +97,7 @@ namespace SimulacionTP4.Presentacion
 
         public int GetPrecioSinStock()
         {
-            return Convert.ToInt32(txtSinStock.Text);
+            return txtSinStock.Valor;
         }
         public bool UsoPrecioSinStock()
         {

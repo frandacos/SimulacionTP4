@@ -41,37 +41,42 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblMedia = new System.Windows.Forms.Label();
             this.chkDocenaCompra = new System.Windows.Forms.CheckBox();
-            this.txtDocenasCompra = new System.Windows.Forms.TextBox();
             this.chkSinStock = new System.Windows.Forms.CheckBox();
-            this.txtSinStock = new System.Windows.Forms.TextBox();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtIteraciones = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
-            this.txtDiaDesde = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
-            this.txtCantidadDias = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
-            this.txtPrecioCompra = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
-            this.txtPrecioVenta = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.tablaProcedimiento = new System.Windows.Forms.DataGridView();
             this.txtPrecioReventa = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtPrecioVenta = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtPrecioCompra = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtCantidadDias = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtDiaDesde = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtIteraciones = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSinStock = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtDocenasCompra = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlDataGridView = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.tablaProcedimiento = new System.Windows.Forms.DataGridView();
             this.tablaCalculo = new System.Windows.Forms.DataGridView();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.histograma = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaProcedimiento)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlDataGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProcedimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCalculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.histograma)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCalcular
@@ -91,6 +96,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -102,6 +108,7 @@
             // 
             // lblTotal
             // 
+            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -113,10 +120,11 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(58, 15);
+            this.label3.Location = new System.Drawing.Point(118, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 11;
@@ -124,10 +132,11 @@
             // 
             // lblMedia
             // 
+            this.lblMedia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMedia.AutoSize = true;
             this.lblMedia.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.lblMedia.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMedia.Location = new System.Drawing.Point(118, 15);
+            this.lblMedia.Location = new System.Drawing.Point(178, 15);
             this.lblMedia.Name = "lblMedia";
             this.lblMedia.Size = new System.Drawing.Size(47, 17);
             this.lblMedia.TabIndex = 10;
@@ -136,40 +145,22 @@
             // chkDocenaCompra
             // 
             this.chkDocenaCompra.AutoSize = true;
-            this.chkDocenaCompra.Location = new System.Drawing.Point(15, 22);
+            this.chkDocenaCompra.Location = new System.Drawing.Point(12, 19);
             this.chkDocenaCompra.Name = "chkDocenaCompra";
-            this.chkDocenaCompra.Size = new System.Drawing.Size(126, 17);
+            this.chkDocenaCompra.Size = new System.Drawing.Size(15, 14);
             this.chkDocenaCompra.TabIndex = 12;
-            this.chkDocenaCompra.Text = "Docenas Dia anterior";
             this.chkDocenaCompra.UseVisualStyleBackColor = true;
             this.chkDocenaCompra.CheckedChanged += new System.EventHandler(this.ChkClickCompraDocena);
-            // 
-            // txtDocenasCompra
-            // 
-            this.txtDocenasCompra.Location = new System.Drawing.Point(147, 19);
-            this.txtDocenasCompra.MaxLength = 9;
-            this.txtDocenasCompra.Name = "txtDocenasCompra";
-            this.txtDocenasCompra.Size = new System.Drawing.Size(100, 20);
-            this.txtDocenasCompra.TabIndex = 13;
             // 
             // chkSinStock
             // 
             this.chkSinStock.AutoSize = true;
-            this.chkSinStock.Location = new System.Drawing.Point(279, 21);
+            this.chkSinStock.Location = new System.Drawing.Point(16, 22);
             this.chkSinStock.Name = "chkSinStock";
-            this.chkSinStock.Size = new System.Drawing.Size(162, 17);
+            this.chkSinStock.Size = new System.Drawing.Size(15, 14);
             this.chkSinStock.TabIndex = 14;
-            this.chkSinStock.Text = "Comprar Mercaderia Faltante";
             this.chkSinStock.UseVisualStyleBackColor = true;
             this.chkSinStock.CheckedChanged += new System.EventHandler(this.chkSinStock_CheckedChanged);
-            // 
-            // txtSinStock
-            // 
-            this.txtSinStock.Location = new System.Drawing.Point(447, 19);
-            this.txtSinStock.MaxLength = 9;
-            this.txtSinStock.Name = "txtSinStock";
-            this.txtSinStock.Size = new System.Drawing.Size(100, 20);
-            this.txtSinStock.TabIndex = 15;
             // 
             // pnlSuperior
             // 
@@ -222,172 +213,6 @@
             this.pnlMenu.Size = new System.Drawing.Size(257, 479);
             this.pnlMenu.TabIndex = 18;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtDocenasCompra);
-            this.panel1.Controls.Add(this.chkDocenaCompra);
-            this.panel1.Controls.Add(this.txtSinStock);
-            this.panel1.Controls.Add(this.chkSinStock);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 494);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 54);
-            this.panel1.TabIndex = 19;
-            // 
-            // txtIteraciones
-            // 
-            this.txtIteraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtIteraciones.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtIteraciones.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtIteraciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtIteraciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIteraciones.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIteraciones.ForeColor = System.Drawing.Color.White;
-            this.txtIteraciones.Location = new System.Drawing.Point(0, 0);
-            this.txtIteraciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtIteraciones.Name = "txtIteraciones";
-            this.txtIteraciones.Size = new System.Drawing.Size(257, 53);
-            this.txtIteraciones.TabIndex = 7;
-            this.txtIteraciones.Texto = "Iteraciones:";
-            this.txtIteraciones.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtIteraciones.Valor = 0;
-            // 
-            // txtDiaDesde
-            // 
-            this.txtDiaDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtDiaDesde.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtDiaDesde.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtDiaDesde.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtDiaDesde.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtDiaDesde.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaDesde.ForeColor = System.Drawing.Color.White;
-            this.txtDiaDesde.Location = new System.Drawing.Point(0, 53);
-            this.txtDiaDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDiaDesde.Name = "txtDiaDesde";
-            this.txtDiaDesde.Size = new System.Drawing.Size(257, 53);
-            this.txtDiaDesde.TabIndex = 8;
-            this.txtDiaDesde.Texto = "Día Desde:";
-            this.txtDiaDesde.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtDiaDesde.Valor = 0;
-            // 
-            // txtCantidadDias
-            // 
-            this.txtCantidadDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtCantidadDias.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtCantidadDias.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtCantidadDias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtCantidadDias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtCantidadDias.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadDias.ForeColor = System.Drawing.Color.White;
-            this.txtCantidadDias.Location = new System.Drawing.Point(0, 106);
-            this.txtCantidadDias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCantidadDias.Name = "txtCantidadDias";
-            this.txtCantidadDias.Size = new System.Drawing.Size(257, 53);
-            this.txtCantidadDias.TabIndex = 9;
-            this.txtCantidadDias.Texto = "Cantidad Días:";
-            this.txtCantidadDias.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtCantidadDias.Valor = 0;
-            // 
-            // txtPrecioCompra
-            // 
-            this.txtPrecioCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtPrecioCompra.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtPrecioCompra.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtPrecioCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPrecioCompra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioCompra.ForeColor = System.Drawing.Color.White;
-            this.txtPrecioCompra.Location = new System.Drawing.Point(0, 159);
-            this.txtPrecioCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(257, 53);
-            this.txtPrecioCompra.TabIndex = 10;
-            this.txtPrecioCompra.Texto = "Precio Compra:";
-            this.txtPrecioCompra.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtPrecioCompra.Valor = 0;
-            // 
-            // txtPrecioVenta
-            // 
-            this.txtPrecioVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtPrecioVenta.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtPrecioVenta.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtPrecioVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPrecioVenta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioVenta.ForeColor = System.Drawing.Color.White;
-            this.txtPrecioVenta.Location = new System.Drawing.Point(0, 212);
-            this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(257, 53);
-            this.txtPrecioVenta.TabIndex = 11;
-            this.txtPrecioVenta.Texto = "Precio Venta:";
-            this.txtPrecioVenta.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtPrecioVenta.Valor = 0;
-            // 
-            // txtPrecioReventa
-            // 
-            this.txtPrecioReventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtPrecioReventa.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtPrecioReventa.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtPrecioReventa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPrecioReventa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPrecioReventa.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioReventa.ForeColor = System.Drawing.Color.White;
-            this.txtPrecioReventa.Location = new System.Drawing.Point(0, 265);
-            this.txtPrecioReventa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPrecioReventa.Name = "txtPrecioReventa";
-            this.txtPrecioReventa.Size = new System.Drawing.Size(257, 53);
-            this.txtPrecioReventa.TabIndex = 12;
-            this.txtPrecioReventa.Texto = "Precio Reventa:";
-            this.txtPrecioReventa.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtPrecioReventa.Valor = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.lblMedia);
-            this.panel2.Controls.Add(this.lblTotal);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 69);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(571, 47);
-            this.panel2.TabIndex = 20;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 116);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(40, 378);
-            this.panel3.TabIndex = 21;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(531, 116);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 378);
-            this.panel4.TabIndex = 22;
-            // 
-            // pnlDataGridView
-            // 
-            this.pnlDataGridView.Controls.Add(this.tablaCalculo);
-            this.pnlDataGridView.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDataGridView.Location = new System.Drawing.Point(331, 116);
-            this.pnlDataGridView.Name = "pnlDataGridView";
-            this.pnlDataGridView.Size = new System.Drawing.Size(200, 378);
-            this.pnlDataGridView.TabIndex = 23;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(315, 116);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(16, 378);
-            this.splitter1.TabIndex = 39;
-            this.splitter1.TabStop = false;
-            // 
             // tablaProcedimiento
             // 
             this.tablaProcedimiento.AllowUserToAddRows = false;
@@ -428,6 +253,200 @@
             this.tablaProcedimiento.Size = new System.Drawing.Size(257, 107);
             this.tablaProcedimiento.TabIndex = 40;
             this.tablaProcedimiento.Visible = false;
+            // 
+            // txtPrecioReventa
+            // 
+            this.txtPrecioReventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtPrecioReventa.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtPrecioReventa.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtPrecioReventa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPrecioReventa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPrecioReventa.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioReventa.ForeColor = System.Drawing.Color.White;
+            this.txtPrecioReventa.Location = new System.Drawing.Point(0, 265);
+            this.txtPrecioReventa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrecioReventa.Name = "txtPrecioReventa";
+            this.txtPrecioReventa.Size = new System.Drawing.Size(257, 53);
+            this.txtPrecioReventa.TabIndex = 12;
+            this.txtPrecioReventa.Texto = "Precio Reventa:";
+            this.txtPrecioReventa.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtPrecioReventa.Valor = 0;
+            // 
+            // txtPrecioVenta
+            // 
+            this.txtPrecioVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtPrecioVenta.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtPrecioVenta.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtPrecioVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPrecioVenta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioVenta.ForeColor = System.Drawing.Color.White;
+            this.txtPrecioVenta.Location = new System.Drawing.Point(0, 212);
+            this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(257, 53);
+            this.txtPrecioVenta.TabIndex = 11;
+            this.txtPrecioVenta.Texto = "Precio Venta:";
+            this.txtPrecioVenta.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtPrecioVenta.Valor = 0;
+            // 
+            // txtPrecioCompra
+            // 
+            this.txtPrecioCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtPrecioCompra.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtPrecioCompra.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtPrecioCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPrecioCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioCompra.ForeColor = System.Drawing.Color.White;
+            this.txtPrecioCompra.Location = new System.Drawing.Point(0, 159);
+            this.txtPrecioCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrecioCompra.Name = "txtPrecioCompra";
+            this.txtPrecioCompra.Size = new System.Drawing.Size(257, 53);
+            this.txtPrecioCompra.TabIndex = 10;
+            this.txtPrecioCompra.Texto = "Precio Compra:";
+            this.txtPrecioCompra.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtPrecioCompra.Valor = 0;
+            // 
+            // txtCantidadDias
+            // 
+            this.txtCantidadDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtCantidadDias.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtCantidadDias.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtCantidadDias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtCantidadDias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtCantidadDias.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadDias.ForeColor = System.Drawing.Color.White;
+            this.txtCantidadDias.Location = new System.Drawing.Point(0, 106);
+            this.txtCantidadDias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidadDias.Name = "txtCantidadDias";
+            this.txtCantidadDias.Size = new System.Drawing.Size(257, 53);
+            this.txtCantidadDias.TabIndex = 9;
+            this.txtCantidadDias.Texto = "Cantidad Días:";
+            this.txtCantidadDias.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtCantidadDias.Valor = 0;
+            // 
+            // txtDiaDesde
+            // 
+            this.txtDiaDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtDiaDesde.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtDiaDesde.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtDiaDesde.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtDiaDesde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDiaDesde.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaDesde.ForeColor = System.Drawing.Color.White;
+            this.txtDiaDesde.Location = new System.Drawing.Point(0, 53);
+            this.txtDiaDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDiaDesde.Name = "txtDiaDesde";
+            this.txtDiaDesde.Size = new System.Drawing.Size(257, 53);
+            this.txtDiaDesde.TabIndex = 8;
+            this.txtDiaDesde.Texto = "Día Desde:";
+            this.txtDiaDesde.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtDiaDesde.Valor = 0;
+            // 
+            // txtIteraciones
+            // 
+            this.txtIteraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtIteraciones.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtIteraciones.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtIteraciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtIteraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIteraciones.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIteraciones.ForeColor = System.Drawing.Color.White;
+            this.txtIteraciones.Location = new System.Drawing.Point(0, 0);
+            this.txtIteraciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIteraciones.Name = "txtIteraciones";
+            this.txtIteraciones.Size = new System.Drawing.Size(257, 53);
+            this.txtIteraciones.TabIndex = 7;
+            this.txtIteraciones.Texto = "Iteraciones:";
+            this.txtIteraciones.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtIteraciones.Valor = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtSinStock);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.txtDocenasCompra);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 494);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(571, 54);
+            this.panel1.TabIndex = 19;
+            // 
+            // txtSinStock
+            // 
+            this.txtSinStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtSinStock.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtSinStock.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtSinStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSinStock.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtSinStock.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSinStock.ForeColor = System.Drawing.Color.White;
+            this.txtSinStock.Location = new System.Drawing.Point(324, 0);
+            this.txtSinStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSinStock.Name = "txtSinStock";
+            this.txtSinStock.Size = new System.Drawing.Size(240, 54);
+            this.txtSinStock.TabIndex = 17;
+            this.txtSinStock.Texto = "Compra Mercaderia Faltante";
+            this.txtSinStock.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtSinStock.Valor = 0;
+            // 
+            // txtDocenasCompra
+            // 
+            this.txtDocenasCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtDocenasCompra.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtDocenasCompra.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtDocenasCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtDocenasCompra.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtDocenasCompra.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocenasCompra.ForeColor = System.Drawing.Color.White;
+            this.txtDocenasCompra.Location = new System.Drawing.Point(37, 0);
+            this.txtDocenasCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDocenasCompra.Name = "txtDocenasCompra";
+            this.txtDocenasCompra.Size = new System.Drawing.Size(236, 54);
+            this.txtDocenasCompra.TabIndex = 16;
+            this.txtDocenasCompra.Texto = "Docenas Día Anterior";
+            this.txtDocenasCompra.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtDocenasCompra.Valor = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblMedia);
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(571, 47);
+            this.panel2.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 116);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(40, 378);
+            this.panel3.TabIndex = 21;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(531, 116);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(40, 378);
+            this.panel4.TabIndex = 22;
+            // 
+            // pnlDataGridView
+            // 
+            this.pnlDataGridView.Controls.Add(this.tablaCalculo);
+            this.pnlDataGridView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDataGridView.Location = new System.Drawing.Point(331, 116);
+            this.pnlDataGridView.Name = "pnlDataGridView";
+            this.pnlDataGridView.Size = new System.Drawing.Size(200, 378);
+            this.pnlDataGridView.TabIndex = 23;
             // 
             // tablaCalculo
             // 
@@ -470,6 +489,15 @@
             this.tablaCalculo.TabIndex = 40;
             this.tablaCalculo.Visible = false;
             // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.splitter1.Location = new System.Drawing.Point(315, 116);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(16, 378);
+            this.splitter1.TabIndex = 39;
+            this.splitter1.TabStop = false;
+            // 
             // histograma
             // 
             chartArea1.Name = "ChartArea1";
@@ -486,6 +514,36 @@
             this.histograma.Size = new System.Drawing.Size(275, 378);
             this.histograma.TabIndex = 16;
             this.histograma.Text = "Grafica De Media";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.panel5.Controls.Add(this.chkDocenaCompra);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(37, 54);
+            this.panel5.TabIndex = 18;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.panel6.Controls.Add(this.chkSinStock);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(284, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(40, 54);
+            this.panel6.TabIndex = 19;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(273, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(11, 54);
+            this.panel7.TabIndex = 41;
             // 
             // FrmPrincipal
             // 
@@ -510,14 +568,17 @@
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaProcedimiento)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlDataGridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProcedimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCalculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.histograma)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,9 +590,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblMedia;
         private System.Windows.Forms.CheckBox chkDocenaCompra;
-        private System.Windows.Forms.TextBox txtDocenasCompra;
         private System.Windows.Forms.CheckBox chkSinStock;
-        private System.Windows.Forms.TextBox txtSinStock;
         private System.Windows.Forms.Panel pnlSuperior;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label lblTitulo;
@@ -551,5 +610,10 @@
         private System.Windows.Forms.DataGridView tablaProcedimiento;
         private System.Windows.Forms.DataGridView tablaCalculo;
         private System.Windows.Forms.DataVisualization.Charting.Chart histograma;
+        private Controles.DatoTxtNum txtSinStock;
+        private Controles.DatoTxtNum txtDocenasCompra;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel5;
     }
 }
