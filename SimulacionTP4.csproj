@@ -51,6 +51,21 @@
     <Compile Include="Modelo\ClimaSoleado.cs" />
     <Compile Include="Modelo\Fila.cs" />
     <Compile Include="Modelo\IClima.cs" />
+    <Compile Include="Presentacion\Controles\DatoCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Controles\DatoCombo.designer.cs">
+      <DependentUpon>DatoCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Controles\DatoTxtNum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Controles\DatoTxtNum.designer.cs">
+      <DependentUpon>DatoTxtNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Controles\NumTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentacion\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +78,12 @@
     <Compile Include="Servicio\GestorMontecarlo.cs" />
     <Compile Include="Servicio\Montecarlo.cs" />
     <Compile Include="Servicio\ProbabilidadClima.cs" />
+    <EmbeddedResource Include="Presentacion\Controles\DatoCombo.resx">
+      <DependentUpon>DatoCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Controles\DatoTxtNum.resx">
+      <DependentUpon>DatoTxtNum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

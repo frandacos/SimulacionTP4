@@ -18,3 +18,15 @@ D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\obj\Debug\Sim
 D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\bin\Debug\SimulacionTP4.exe.config
 D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\bin\Debug\SimulacionTP4.exe
 D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP4\TP4-Sim\bin\Debug\SimulacionTP4.pdb
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\bin\Debug\SimulacionTP4.exe.config
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\bin\Debug\SimulacionTP4.exe
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\bin\Debug\SimulacionTP4.pdb
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.csprojAssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.Presentacion.FrmPrincipal.resources
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.Properties.Resources.resources
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.csproj.GenerateResource.cache
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.exe
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.pdb
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP4.Presentacion.Controles.DatoTxtNum.resources
+C:\Users\franc\OneDrive\Escritorio\Trabajos Practicos Simulacion\TP4\SimulacionTP4\obj\Debug\SimulacionTP1.Presentacion.ControlesUsuario.DatoCombo.resources

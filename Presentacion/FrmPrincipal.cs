@@ -39,7 +39,7 @@ namespace SimulacionTP4.Presentacion
 
         public void LimpiarGrafica()
         {
-            graficaMedia.Series[0].Points.Clear();
+            histograma.Series[0].Points.Clear();
         }
 
         public double GetPrecioCompra()
@@ -55,7 +55,7 @@ namespace SimulacionTP4.Presentacion
         public void MostrarGrafica(double x, double y)
         {
 
-            graficaMedia.Series[0].Points.AddXY(x,y);
+            histograma.Series[0].Points.AddXY(x,y);
         }
 
         public double GetPrecioReventa()
