@@ -6,6 +6,14 @@ namespace SimulacionTP4.Presentacion.Controles
 {
     public partial class DatoTxtNum : UserControl
     {
+        public string TextoAyuda {
+            set {
+                toolTipBtn.SetToolTip(lblNombreCampo, value);
+                toolTipBtn.SetToolTip(txtValor, value);
+                toolTipBtn.SetToolTip(this, value);
+            }
+            get { return toolTipBtn.GetToolTip(this); }
+        }
         public Color ColorHover { get; set; } = Color.FromArgb(57, 70, 87);
         public Color ColorFondo { get; set; } = Color.FromArgb(48, 61, 77);
         public string Texto { 
@@ -53,6 +61,11 @@ namespace SimulacionTP4.Presentacion.Controles
         {
             txtValor.Focus();
             txtValor.SelectAll();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
