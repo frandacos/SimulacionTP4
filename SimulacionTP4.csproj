@@ -116,6 +116,35 @@
   <ItemGroup>
     <None Include="Resources\dado.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\FlechaDerechaBlanca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaDerechaCeleste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaDerechaNegra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaIzquieraBlanca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaIzquieraCeleste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaIzquieraNegra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuCeleste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuNegro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

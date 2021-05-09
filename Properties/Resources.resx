@@ -118,10 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FlechaDerechaBlanca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaDerechaBlanca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaDerechaCeleste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaDerechaCeleste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaDerechaNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaDerechaNegra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaIzquieraBlanca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaIzquieraBlanca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaIzquieraCeleste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaIzquieraCeleste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaIzquieraNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaIzquieraNegra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuCeleste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuCeleste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuNegro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -17,7 +17,20 @@ namespace SimulacionTP4.Presentacion
         private void ClickBtnCalcular(object sender, System.EventArgs e)
         {
             gestor.Calcular();
-
+            PrepararVentana();
+        }
+        private void PrepararVentana()
+        {
+            lblMedia.Visible = true;
+            lblTotal.Visible = true;
+            tablaCalculo.Visible = true;
+            histograma.Visible = true;
+            label1.Visible = true;
+            label3.Visible = true;
+            picFondo.Visible = false;
+            lblGUIVacio.Visible = false;
+            btnRightBlanca.Visible = true;
+            btnLeftBlanca.Visible = true;
         }
         public int GetCompraDocena()
         {
@@ -71,6 +84,7 @@ namespace SimulacionTP4.Presentacion
 
         public void MostrarTabla(string[][] tabla)
         {
+            tablaCalculo.Rows.Clear();
             foreach (string[] fila in tabla)
                 tablaCalculo.Rows.Add(fila);
         }
@@ -112,12 +126,14 @@ namespace SimulacionTP4.Presentacion
 
         private void btnRight_Click(object sender, EventArgs e)
         {
+            tablaCalculo.Visible = false;
             histograma.Visible = true;
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
             histograma.Visible = false;
+            tablaCalculo.Visible = true;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
