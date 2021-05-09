@@ -17,6 +17,7 @@ namespace SimulacionTP4.Presentacion
         private void ClickBtnCalcular(object sender, System.EventArgs e)
         {
             gestor.Calcular();
+
         }
         public int GetCompraDocena()
         {
@@ -54,8 +55,7 @@ namespace SimulacionTP4.Presentacion
 
         public void MostrarGrafica(double x, double y)
         {
-
-            histograma.Series[0].Points.AddXY(x,y);
+            histograma.Series[0].Points.AddXY(x, y);
         }
 
         public double GetPrecioReventa()
@@ -65,12 +65,14 @@ namespace SimulacionTP4.Presentacion
 
         public void MostrarResultado(string gananciaAcumulada, string media)
         {
-
+            lblMedia.Text = media;
+            lblTotal.Text = gananciaAcumulada;
         }
 
         public void MostrarTabla(string[][] tabla)
         {
-
+            foreach (string[] fila in tabla)
+                tablaCalculo.Rows.Add(fila);
         }
 
         public void MostrarExcepcion(string excepcion)
@@ -94,7 +96,6 @@ namespace SimulacionTP4.Presentacion
         {
             txtSinStock.Enabled = !chkSinStock.Checked;
         }
-
         public int GetPrecioSinStock()
         {
             return txtSinStock.Valor;
@@ -104,8 +105,32 @@ namespace SimulacionTP4.Presentacion
             return chkSinStock.Checked;
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            histograma.Visible = true;
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            histograma.Visible = false;
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+
+            if (pnlMenu.Visible)
+            {
+                pnlMenu.Visible = false;
+            }
+            else
+            {
+                pnlMenu.Visible = true;
+            }
 
         }
     }

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.btnCalcular = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -46,7 +45,11 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.tablaProcedimiento = new System.Windows.Forms.DataGridView();
+            this.txtSinStock = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.txtDocenasCompra = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.txtPrecioReventa = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
             this.txtPrecioVenta = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
             this.txtPrecioCompra = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
@@ -54,39 +57,55 @@
             this.txtDiaDesde = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
             this.txtIteraciones = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSinStock = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
-            this.txtDocenasCompra = new SimulacionTP4.Presentacion.Controles.DatoTxtNum();
+            this.btnLeft = new System.Windows.Forms.PictureBox();
+            this.btnRight = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pnlDataGridView = new System.Windows.Forms.Panel();
+            this.pnlTabla = new System.Windows.Forms.Panel();
             this.tablaCalculo = new System.Windows.Forms.DataGridView();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.histograma = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RNDClima = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clima = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RNDDemanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Demanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadSobrante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IngresosDiarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoSobrante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GananciaDiaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GananciaAcumulada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Media = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.pnlCalcular = new System.Windows.Forms.Panel();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProcedimiento)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRight)).BeginInit();
             this.panel2.SuspendLayout();
-            this.pnlDataGridView.SuspendLayout();
+            this.pnlTabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCalculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.histograma)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            this.pnlCalcular.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCalcular
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(165)))), ((int)(((byte)(142)))));
-            this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnCalcular.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCalcular.Location = new System.Drawing.Point(0, 425);
+            this.btnCalcular.Location = new System.Drawing.Point(0, 0);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(257, 54);
             this.btnCalcular.TabIndex = 6;
@@ -145,7 +164,7 @@
             // chkDocenaCompra
             // 
             this.chkDocenaCompra.AutoSize = true;
-            this.chkDocenaCompra.Location = new System.Drawing.Point(12, 19);
+            this.chkDocenaCompra.Location = new System.Drawing.Point(9, 21);
             this.chkDocenaCompra.Name = "chkDocenaCompra";
             this.chkDocenaCompra.Size = new System.Drawing.Size(15, 14);
             this.chkDocenaCompra.TabIndex = 12;
@@ -155,7 +174,7 @@
             // chkSinStock
             // 
             this.chkSinStock.AutoSize = true;
-            this.chkSinStock.Location = new System.Drawing.Point(16, 22);
+            this.chkSinStock.Location = new System.Drawing.Point(9, 20);
             this.chkSinStock.Name = "chkSinStock";
             this.chkSinStock.Size = new System.Drawing.Size(15, 14);
             this.chkSinStock.TabIndex = 14;
@@ -165,6 +184,7 @@
             // pnlSuperior
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
+            this.pnlSuperior.Controls.Add(this.btnMenu);
             this.pnlSuperior.Controls.Add(this.logo);
             this.pnlSuperior.Controls.Add(this.lblTitulo);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -198,61 +218,95 @@
             // 
             // pnlMenu
             // 
+            this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.pnlMenu.Controls.Add(this.tablaProcedimiento);
+            this.pnlMenu.Controls.Add(this.txtSinStock);
+            this.pnlMenu.Controls.Add(this.txtDocenasCompra);
+            this.pnlMenu.Controls.Add(this.panel8);
+            this.pnlMenu.Controls.Add(this.pnlCalcular);
             this.pnlMenu.Controls.Add(this.txtPrecioReventa);
             this.pnlMenu.Controls.Add(this.txtPrecioVenta);
             this.pnlMenu.Controls.Add(this.txtPrecioCompra);
             this.pnlMenu.Controls.Add(this.txtCantidadDias);
             this.pnlMenu.Controls.Add(this.txtDiaDesde);
             this.pnlMenu.Controls.Add(this.txtIteraciones);
-            this.pnlMenu.Controls.Add(this.btnCalcular);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlMenu.Location = new System.Drawing.Point(571, 69);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(257, 479);
+            this.pnlMenu.Size = new System.Drawing.Size(257, 522);
             this.pnlMenu.TabIndex = 18;
             // 
-            // tablaProcedimiento
+            // txtSinStock
             // 
-            this.tablaProcedimiento.AllowUserToAddRows = false;
-            this.tablaProcedimiento.AllowUserToDeleteRows = false;
-            this.tablaProcedimiento.AllowUserToResizeColumns = false;
-            this.tablaProcedimiento.AllowUserToResizeRows = false;
-            this.tablaProcedimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablaProcedimiento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
-            this.tablaProcedimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaProcedimiento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(165)))), ((int)(((byte)(142)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(165)))), ((int)(((byte)(142)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaProcedimiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaProcedimiento.ColumnHeadersHeight = 50;
-            this.tablaProcedimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tablaProcedimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablaProcedimiento.EnableHeadersVisualStyles = false;
-            this.tablaProcedimiento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
-            this.tablaProcedimiento.Location = new System.Drawing.Point(0, 318);
-            this.tablaProcedimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tablaProcedimiento.MultiSelect = false;
-            this.tablaProcedimiento.Name = "tablaProcedimiento";
-            this.tablaProcedimiento.ReadOnly = true;
-            this.tablaProcedimiento.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(78)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.tablaProcedimiento.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaProcedimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaProcedimiento.Size = new System.Drawing.Size(257, 107);
-            this.tablaProcedimiento.TabIndex = 40;
-            this.tablaProcedimiento.Visible = false;
+            this.txtSinStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtSinStock.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtSinStock.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtSinStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSinStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSinStock.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSinStock.ForeColor = System.Drawing.Color.White;
+            this.txtSinStock.Location = new System.Drawing.Point(30, 372);
+            this.txtSinStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSinStock.Name = "txtSinStock";
+            this.txtSinStock.Size = new System.Drawing.Size(227, 54);
+            this.txtSinStock.TabIndex = 17;
+            this.txtSinStock.Texto = "Compra Mercaderia Faltante";
+            this.txtSinStock.TextoAyuda = "";
+            this.txtSinStock.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtSinStock.Valor = 0;
+            // 
+            // txtDocenasCompra
+            // 
+            this.txtDocenasCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtDocenasCompra.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.txtDocenasCompra.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.txtDocenasCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtDocenasCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDocenasCompra.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocenasCompra.ForeColor = System.Drawing.Color.White;
+            this.txtDocenasCompra.Location = new System.Drawing.Point(30, 318);
+            this.txtDocenasCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDocenasCompra.Name = "txtDocenasCompra";
+            this.txtDocenasCompra.Size = new System.Drawing.Size(227, 54);
+            this.txtDocenasCompra.TabIndex = 16;
+            this.txtDocenasCompra.Texto = "Docenas Día Anterior";
+            this.txtDocenasCompra.TextoAyuda = "Francoooooooooooooooo";
+            this.txtDocenasCompra.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
+            this.txtDocenasCompra.Valor = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.panel8.Controls.Add(this.panel6);
+            this.panel8.Controls.Add(this.panel5);
+            this.panel8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 318);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(30, 150);
+            this.panel8.TabIndex = 19;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.panel6.Controls.Add(this.chkSinStock);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 54);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(30, 54);
+            this.panel6.TabIndex = 19;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.panel5.Controls.Add(this.chkDocenaCompra);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 54);
+            this.panel5.TabIndex = 18;
             // 
             // txtPrecioReventa
             // 
@@ -269,6 +323,7 @@
             this.txtPrecioReventa.Size = new System.Drawing.Size(257, 53);
             this.txtPrecioReventa.TabIndex = 12;
             this.txtPrecioReventa.Texto = "Precio Reventa:";
+            this.txtPrecioReventa.TextoAyuda = "";
             this.txtPrecioReventa.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
             this.txtPrecioReventa.Valor = 0;
             // 
@@ -287,6 +342,7 @@
             this.txtPrecioVenta.Size = new System.Drawing.Size(257, 53);
             this.txtPrecioVenta.TabIndex = 11;
             this.txtPrecioVenta.Texto = "Precio Venta:";
+            this.txtPrecioVenta.TextoAyuda = "";
             this.txtPrecioVenta.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
             this.txtPrecioVenta.Valor = 0;
             // 
@@ -305,6 +361,7 @@
             this.txtPrecioCompra.Size = new System.Drawing.Size(257, 53);
             this.txtPrecioCompra.TabIndex = 10;
             this.txtPrecioCompra.Texto = "Precio Compra:";
+            this.txtPrecioCompra.TextoAyuda = "";
             this.txtPrecioCompra.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
             this.txtPrecioCompra.Valor = 0;
             // 
@@ -323,6 +380,7 @@
             this.txtCantidadDias.Size = new System.Drawing.Size(257, 53);
             this.txtCantidadDias.TabIndex = 9;
             this.txtCantidadDias.Texto = "Cantidad Días:";
+            this.txtCantidadDias.TextoAyuda = "";
             this.txtCantidadDias.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
             this.txtCantidadDias.Valor = 0;
             // 
@@ -341,6 +399,7 @@
             this.txtDiaDesde.Size = new System.Drawing.Size(257, 53);
             this.txtDiaDesde.TabIndex = 8;
             this.txtDiaDesde.Texto = "Día Desde:";
+            this.txtDiaDesde.TextoAyuda = "";
             this.txtDiaDesde.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
             this.txtDiaDesde.Valor = 0;
             // 
@@ -359,57 +418,45 @@
             this.txtIteraciones.Size = new System.Drawing.Size(257, 53);
             this.txtIteraciones.TabIndex = 7;
             this.txtIteraciones.Texto = "Iteraciones:";
+            this.txtIteraciones.TextoAyuda = "";
             this.txtIteraciones.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
             this.txtIteraciones.Valor = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtSinStock);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.txtDocenasCompra);
-            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.btnLeft);
+            this.panel1.Controls.Add(this.btnRight);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 494);
+            this.panel1.Location = new System.Drawing.Point(0, 537);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(571, 54);
             this.panel1.TabIndex = 19;
             // 
-            // txtSinStock
+            // btnLeft
             // 
-            this.txtSinStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtSinStock.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtSinStock.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtSinStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSinStock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSinStock.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSinStock.ForeColor = System.Drawing.Color.White;
-            this.txtSinStock.Location = new System.Drawing.Point(324, 0);
-            this.txtSinStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSinStock.Name = "txtSinStock";
-            this.txtSinStock.Size = new System.Drawing.Size(240, 54);
-            this.txtSinStock.TabIndex = 17;
-            this.txtSinStock.Texto = "Compra Mercaderia Faltante";
-            this.txtSinStock.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtSinStock.Valor = 0;
+            this.btnLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLeft.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnLeft.Image")));
+            this.btnLeft.Location = new System.Drawing.Point(261, 9);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(27, 33);
+            this.btnLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLeft.TabIndex = 1;
+            this.btnLeft.TabStop = false;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // txtDocenasCompra
+            // btnRight
             // 
-            this.txtDocenasCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtDocenasCompra.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.txtDocenasCompra.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.txtDocenasCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtDocenasCompra.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtDocenasCompra.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocenasCompra.ForeColor = System.Drawing.Color.White;
-            this.txtDocenasCompra.Location = new System.Drawing.Point(37, 0);
-            this.txtDocenasCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDocenasCompra.Name = "txtDocenasCompra";
-            this.txtDocenasCompra.Size = new System.Drawing.Size(236, 54);
-            this.txtDocenasCompra.TabIndex = 16;
-            this.txtDocenasCompra.Texto = "Docenas Día Anterior";
-            this.txtDocenasCompra.TipoDato = SimulacionTP4.Presentacion.Controles.NumTextBox.TipoDato.Reales;
-            this.txtDocenasCompra.Valor = 0;
+            this.btnRight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRight.Image = ((System.Drawing.Image)(resources.GetObject("btnRight.Image")));
+            this.btnRight.Location = new System.Drawing.Point(294, 9);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(27, 33);
+            this.btnRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRight.TabIndex = 0;
+            this.btnRight.TabStop = false;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // panel2
             // 
@@ -428,25 +475,26 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 116);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(40, 378);
+            this.panel3.Size = new System.Drawing.Size(21, 421);
             this.panel3.TabIndex = 21;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(531, 116);
+            this.panel4.Location = new System.Drawing.Point(548, 116);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 378);
+            this.panel4.Size = new System.Drawing.Size(23, 421);
             this.panel4.TabIndex = 22;
             // 
-            // pnlDataGridView
+            // pnlTabla
             // 
-            this.pnlDataGridView.Controls.Add(this.tablaCalculo);
-            this.pnlDataGridView.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDataGridView.Location = new System.Drawing.Point(331, 116);
-            this.pnlDataGridView.Name = "pnlDataGridView";
-            this.pnlDataGridView.Size = new System.Drawing.Size(200, 378);
-            this.pnlDataGridView.TabIndex = 23;
+            this.pnlTabla.Controls.Add(this.histograma);
+            this.pnlTabla.Controls.Add(this.tablaCalculo);
+            this.pnlTabla.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTabla.Location = new System.Drawing.Point(21, 116);
+            this.pnlTabla.Name = "pnlTabla";
+            this.pnlTabla.Size = new System.Drawing.Size(527, 421);
+            this.pnlTabla.TabIndex = 23;
             // 
             // tablaCalculo
             // 
@@ -468,6 +516,21 @@
             this.tablaCalculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tablaCalculo.ColumnHeadersHeight = 50;
             this.tablaCalculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.tablaCalculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dia,
+            this.RNDClima,
+            this.Clima,
+            this.RNDDemanda,
+            this.Demanda,
+            this.CantidadVenta,
+            this.CantidadSobrante,
+            this.CantidadCompra,
+            this.IngresosDiarios,
+            this.CostoCompra,
+            this.CostoSobrante,
+            this.GananciaDiaria,
+            this.GananciaAcumulada,
+            this.Media});
             this.tablaCalculo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablaCalculo.EnableHeadersVisualStyles = false;
             this.tablaCalculo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
@@ -484,76 +547,142 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(78)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.tablaCalculo.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tablaCalculo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tablaCalculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaCalculo.Size = new System.Drawing.Size(200, 378);
+            this.tablaCalculo.Size = new System.Drawing.Size(527, 421);
             this.tablaCalculo.TabIndex = 40;
-            this.tablaCalculo.Visible = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(315, 116);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(16, 378);
-            this.splitter1.TabIndex = 39;
-            this.splitter1.TabStop = false;
             // 
             // histograma
             // 
-            chartArea1.Name = "ChartArea1";
-            this.histograma.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.histograma.ChartAreas.Add(chartArea2);
             this.histograma.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.histograma.Legends.Add(legend1);
-            this.histograma.Location = new System.Drawing.Point(40, 116);
+            legend2.Name = "Legend1";
+            this.histograma.Legends.Add(legend2);
+            this.histograma.Location = new System.Drawing.Point(0, 0);
             this.histograma.Name = "histograma";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.histograma.Series.Add(series1);
-            this.histograma.Size = new System.Drawing.Size(275, 378);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.histograma.Series.Add(series2);
+            this.histograma.Size = new System.Drawing.Size(527, 421);
             this.histograma.TabIndex = 16;
             this.histograma.Text = "Grafica De Media";
+            this.histograma.Visible = false;
             // 
-            // panel5
+            // Dia
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.panel5.Controls.Add(this.chkDocenaCompra);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(37, 54);
-            this.panel5.TabIndex = 18;
+            this.Dia.HeaderText = "Día";
+            this.Dia.Name = "Dia";
+            this.Dia.ReadOnly = true;
             // 
-            // panel6
+            // RNDClima
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.panel6.Controls.Add(this.chkSinStock);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(284, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(40, 54);
-            this.panel6.TabIndex = 19;
+            this.RNDClima.HeaderText = "RND Clima";
+            this.RNDClima.Name = "RNDClima";
+            this.RNDClima.ReadOnly = true;
             // 
-            // panel7
+            // Clima
             // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(273, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(11, 54);
-            this.panel7.TabIndex = 41;
+            this.Clima.HeaderText = "Clima";
+            this.Clima.Name = "Clima";
+            this.Clima.ReadOnly = true;
+            // 
+            // RNDDemanda
+            // 
+            this.RNDDemanda.HeaderText = "RND Demanda";
+            this.RNDDemanda.Name = "RNDDemanda";
+            this.RNDDemanda.ReadOnly = true;
+            // 
+            // Demanda
+            // 
+            this.Demanda.HeaderText = "Demanda";
+            this.Demanda.Name = "Demanda";
+            this.Demanda.ReadOnly = true;
+            // 
+            // CantidadVenta
+            // 
+            this.CantidadVenta.HeaderText = "Cantidad Venta";
+            this.CantidadVenta.Name = "CantidadVenta";
+            this.CantidadVenta.ReadOnly = true;
+            // 
+            // CantidadSobrante
+            // 
+            this.CantidadSobrante.HeaderText = "Cantidad Sobrante";
+            this.CantidadSobrante.Name = "CantidadSobrante";
+            this.CantidadSobrante.ReadOnly = true;
+            // 
+            // CantidadCompra
+            // 
+            this.CantidadCompra.HeaderText = "Cantidad Compra";
+            this.CantidadCompra.Name = "CantidadCompra";
+            this.CantidadCompra.ReadOnly = true;
+            // 
+            // IngresosDiarios
+            // 
+            this.IngresosDiarios.HeaderText = "Ingresos Diarios";
+            this.IngresosDiarios.Name = "IngresosDiarios";
+            this.IngresosDiarios.ReadOnly = true;
+            // 
+            // CostoCompra
+            // 
+            this.CostoCompra.HeaderText = "Costo Compra";
+            this.CostoCompra.Name = "CostoCompra";
+            this.CostoCompra.ReadOnly = true;
+            // 
+            // CostoSobrante
+            // 
+            this.CostoSobrante.HeaderText = "Costo Sobrante";
+            this.CostoSobrante.Name = "CostoSobrante";
+            this.CostoSobrante.ReadOnly = true;
+            // 
+            // GananciaDiaria
+            // 
+            this.GananciaDiaria.HeaderText = "Ganancia Diaria";
+            this.GananciaDiaria.Name = "GananciaDiaria";
+            this.GananciaDiaria.ReadOnly = true;
+            // 
+            // GananciaAcumulada
+            // 
+            this.GananciaAcumulada.HeaderText = "Ganancia Acumulada";
+            this.GananciaAcumulada.Name = "GananciaAcumulada";
+            this.GananciaAcumulada.ReadOnly = true;
+            // 
+            // Media
+            // 
+            this.Media.HeaderText = "Media";
+            this.Media.Name = "Media";
+            this.Media.ReadOnly = true;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(789, 17);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(27, 33);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMenu.TabIndex = 2;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // pnlCalcular
+            // 
+            this.pnlCalcular.Controls.Add(this.btnCalcular);
+            this.pnlCalcular.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlCalcular.Location = new System.Drawing.Point(0, 468);
+            this.pnlCalcular.Name = "pnlCalcular";
+            this.pnlCalcular.Size = new System.Drawing.Size(257, 54);
+            this.pnlCalcular.TabIndex = 20;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(828, 548);
-            this.Controls.Add(this.histograma);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.pnlDataGridView);
+            this.ClientSize = new System.Drawing.Size(828, 591);
+            this.Controls.Add(this.pnlTabla);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -563,22 +692,25 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TP4 ";
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProcedimiento)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.pnlDataGridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaCalculo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histograma)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRight)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnlTabla.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCalculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histograma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            this.pnlCalcular.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -605,15 +737,31 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel pnlDataGridView;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.DataGridView tablaProcedimiento;
+        private System.Windows.Forms.Panel pnlTabla;
         private System.Windows.Forms.DataGridView tablaCalculo;
         private System.Windows.Forms.DataVisualization.Charting.Chart histograma;
         private Controles.DatoTxtNum txtSinStock;
         private Controles.DatoTxtNum txtDocenasCompra;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox btnLeft;
+        private System.Windows.Forms.PictureBox btnRight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RNDClima;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clima;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RNDDemanda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Demanda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadSobrante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IngresosDiarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostoCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostoSobrante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GananciaDiaria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GananciaAcumulada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Media;
+        private System.Windows.Forms.PictureBox btnMenu;
+        private System.Windows.Forms.Panel pnlCalcular;
     }
 }

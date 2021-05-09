@@ -6,22 +6,35 @@ namespace SimulacionTP4.Presentacion.Controles
 {
     public partial class DatoTxtNum : UserControl
     {
+        public string TextoAyuda
+        {
+            set
+            {
+                toolTipBtn.SetToolTip(lblNombreCampo, value);
+                toolTipBtn.SetToolTip(txtValor, value);
+                toolTipBtn.SetToolTip(this, value);
+            }
+            get { return toolTipBtn.GetToolTip(this); }
+        }
         public Color ColorHover { get; set; } = Color.FromArgb(57, 70, 87);
         public Color ColorFondo { get; set; } = Color.FromArgb(48, 61, 77);
-        public string Texto { 
+        public string Texto
+        {
             get { return lblNombreCampo.Text; }
-            set { lblNombreCampo.Text = value; } 
+            set { lblNombreCampo.Text = value; }
         }
-        public int Valor { 
-            get { return txtValor.Valor; } 
-            set 
+        public int Valor
+        {
+            get { return txtValor.Valor; }
+            set
             {
                 if (value == 0) txtValor.Text = "";
-                else txtValor.Text = value.ToString(); 
+                else txtValor.Text = value.ToString();
             }
         }
 
-        public NumTextBox.TipoDato TipoDato {
+        public NumTextBox.TipoDato TipoDato
+        {
             get { return txtValor.Tipo; }
             set { txtValor.Tipo = value; }
         }
@@ -53,6 +66,11 @@ namespace SimulacionTP4.Presentacion.Controles
         {
             txtValor.Focus();
             txtValor.SelectAll();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

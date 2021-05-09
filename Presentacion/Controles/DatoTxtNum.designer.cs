@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNombreCampo = new System.Windows.Forms.Label();
             this.pnlLineaBase = new System.Windows.Forms.Panel();
             this.txtValor = new SimulacionTP4.Presentacion.Controles.NumTextBox();
+            this.toolTipBtn = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblNombreCampo
@@ -73,6 +75,10 @@
             this.txtValor.MouseLeave += new System.EventHandler(this.MouseSale);
             this.txtValor.MouseHover += new System.EventHandler(this.Hover);
             // 
+            // toolTipBtn
+            // 
+            this.toolTipBtn.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // DatoTxtNum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -101,5 +107,6 @@
         private System.Windows.Forms.Label lblNombreCampo;
         private Controles.NumTextBox txtValor;
         private System.Windows.Forms.Panel pnlLineaBase;
+        private System.Windows.Forms.ToolTip toolTipBtn;
     }
 }
