@@ -14,41 +14,33 @@ namespace SimulacionTP4.Presentacion
             gestor = new GestorMontecarlo(this);
         }
 
-        private void ClickBtnCalcular(object sender, System.EventArgs e)
+        private void ClickBtnCalcular(object sender, EventArgs e)
         {
             gestor.Calcular();
-            PrepararVentana();
-        }
-        private void PrepararVentana()
-        {
-            lblMedia.Visible = true;
-            lblTotal.Visible = true;
-            tablaCalculo.Visible = true;
-            histograma.Visible = true;
-            label1.Visible = true;
-            label3.Visible = true;
-            picFondo.Visible = false;
-            lblGUIVacio.Visible = false;
-            btnRightBlanca.Visible = true;
-            btnLeftBlanca.Visible = true;
-        }
-        public int GetCompraDocena()
-        {
-            return txtDocenasCompra.Valor;
-        }
-        public int GetDiaDesde()
-        {
-            return txtDiaDesde.Valor;
         }
 
-        public int GetIteraciones()
+        public int GetCompraDocena()
         {
-            return txtIteraciones.Valor;
+            return (int) txtDocenasCompra.Valor;
+        }
+        public long GetDiaDesde()
+        {
+            return txtDiaDesde.GetValorLong();
+        }
+
+        public long GetIteraciones()
+        {
+            return txtIteraciones.GetValorLong();
+        }
+
+        public void LimpiarTablaCalculo()
+        {
+            tablaCalculo.Rows.Clear();
         }
 
         public int GetCantidadDiasMostrar()
         {
-            return txtCantidadDias.Valor;
+            return (int) txtCantidadDias.Valor;
         }
 
         public void LimpiarGrafica()
@@ -80,13 +72,19 @@ namespace SimulacionTP4.Presentacion
         {
             lblMedia.Text = media;
             lblTotal.Text = gananciaAcumulada;
+            PrepararVentana();
         }
 
-        public void MostrarTabla(string[][] tabla)
+        private void PrepararVentana()
         {
-            tablaCalculo.Rows.Clear();
-            foreach (string[] fila in tabla)
-                tablaCalculo.Rows.Add(fila);
+            pnlResultado.Visible = true;
+            picFondo.Visible = false;
+            lblGUIVacio.Visible = false;
+        }
+
+        public void MostrarTabla(string[] fila)
+        {
+            tablaCalculo.Rows.Add(fila);
         }
 
         public void MostrarExcepcion(string excepcion)
@@ -98,56 +96,81 @@ namespace SimulacionTP4.Presentacion
                 MessageBoxIcon.Error);
         }
 
-        private void ChkClickCompraDocena(object sender, System.EventArgs e)
+        private void ChkClickCompraDocena(object sender, EventArgs e)
         {
-            txtDocenasCompra.Enabled = !chkDocenaCompra.Checked;
+            txtDocenasCompra.Texto = chkDocenaCompra.Checked 
+                ? "Docenas iniciales"
+                : "Docenas diarias";
         }
         public bool UsoDemandaDiaAnterior()
         {
             return chkDocenaCompra.Checked;
         }
-        public void chkSinStock_CheckedChanged(object sender, EventArgs e)
-        {
-            txtSinStock.Enabled = !chkSinStock.Checked;
-        }
+
         public int GetPrecioSinStock()
         {
-            return txtSinStock.Valor;
+            return (int) txtSinStock.Valor;
         }
         public bool UsoPrecioSinStock()
         {
-            return chkSinStock.Checked;
+            return cbSinStock.Checked;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRight_Click(object sender, EventArgs e)
+        private void ClickBtnRight(object sender, EventArgs e)
         {
             tablaCalculo.Visible = false;
             histograma.Visible = true;
         }
 
-        private void btnLeft_Click(object sender, EventArgs e)
+        private void ClickBtnLeft(object sender, EventArgs e)
         {
             histograma.Visible = false;
             tablaCalculo.Visible = true;
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void ClickBtnMenu(object sender, EventArgs e)
         {
+            pnlDatos.Visible = !pnlDatos.Visible;
+        }
 
-            if (pnlMenu.Visible)
-            {
-                pnlMenu.Visible = false;
-            }
-            else
-            {
-                pnlMenu.Visible = true;
-            }
+        private void ClickCheckSinStock(object sender, EventArgs e)
+        {
+            txtSinStock.Visible = cbSinStock.Checked;
+        }
 
+        private void ClickBtnCalcularMuchos(object sender, EventArgs e)
+        {
+            gestor.CalcularMuchos();
+        }
+
+        public void HabilitarGrafica(bool habilitar)
+        {
+            pnlNavegacion.Visible = habilitar;
+        }
+
+        public void MostrarTablaCalculo(bool habilitar)
+        {
+            tablaCalculo.Visible = habilitar;
+        }
+
+        public void MostrarTablaMuchos(bool habilitar)
+        {
+            tablaMuchos.Visible = habilitar;
+        }
+
+        public void LimpiarTablaMuchos()
+        {
+            tablaMuchos.Rows.Clear();
+        }
+
+        public void MostrarTabla(string iteracion, string media, string acumulada)
+        {
+            tablaMuchos.Rows.Add(new string[]
+            {
+                iteracion,
+                media,
+                acumulada
+            });
         }
     }
 }

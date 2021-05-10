@@ -66,6 +66,12 @@
     <Compile Include="Presentacion\Controles\NumTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Presentacion\FrmDialogoCalcularMuchos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmDialogoCalcularMuchos.Designer.cs">
+      <DependentUpon>FrmDialogoCalcularMuchos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Controles\DatoTxtNum.resx">
       <DependentUpon>DatoTxtNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmDialogoCalcularMuchos.resx">
+      <DependentUpon>FrmDialogoCalcularMuchos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

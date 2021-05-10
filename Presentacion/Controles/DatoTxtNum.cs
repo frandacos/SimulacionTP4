@@ -6,6 +6,11 @@ namespace SimulacionTP4.Presentacion.Controles
 {
     public partial class DatoTxtNum : UserControl
     {
+        public int LongitudMaxima 
+        {
+            get { return txtValor.MaxLength; }
+            set { txtValor.MaxLength = value; } 
+        }
         public string TextoAyuda
         {
             set
@@ -23,7 +28,13 @@ namespace SimulacionTP4.Presentacion.Controles
             get { return lblNombreCampo.Text; }
             set { lblNombreCampo.Text = value; }
         }
-        public int Valor
+
+        public long GetValorLong()
+        {
+            return txtValor.GetValorLong();
+        }
+
+        public double Valor
         {
             get { return txtValor.Valor; }
             set

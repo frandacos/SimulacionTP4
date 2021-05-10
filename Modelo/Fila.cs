@@ -36,12 +36,21 @@ namespace SimulacionTP4.Modelo
                 $"{CantidadVenta}",
                 $"{CantidadSobrante}",
                 $"{CantidadCompra}",
-                $"{Math.Round(IngresosDiarios, 2)}",
-                $"{Math.Round(CostoCompra, 2)}",
-                $"{Math.Round(CostoSobrante, 2)}",
-                $"{Math.Round(GananciaDiaria, 2)}",
-                $"{Math.Round(GananciaAcumulada, 2)}",
-                $"{Math.Round(Media, 2)}"
+                $"$ {Math.Round(IngresosDiarios, 2)}",
+                $"$ {Math.Round(CostoCompra, 2)}",
+                $"$ {Math.Round(CostoSobrante, 2)}",
+                $"$ {Math.Round(GananciaDiaria, 2)}",
+                $"$ {Math.Round(GananciaAcumulada, 2)}",
+                $"$ {Math.Round(Media, 2)}"
+            };
+        }
+
+        public double[] GetPuntoGrafica()
+        {
+            return new double[]
+            {
+                Dia,
+                Media
             };
         }
     }

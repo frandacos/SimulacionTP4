@@ -12,7 +12,7 @@ namespace SimulacionTP4.Presentacion.Controles
             RealesNegativos
         }
 
-        public int Valor { get { return CalcularValor(); } }
+        public double Valor { get { return CalcularValor(); } }
         public TipoDato Tipo { get; set; }
 
         public NumTextBox()
@@ -40,6 +40,18 @@ namespace SimulacionTP4.Presentacion.Controles
                 case TipoDato.RealesNegativos:
                     ValidarRealNegativo(evento);
                     break;
+            }
+        }
+
+        public long GetValorLong()
+        {
+            try
+            {
+                return Convert.ToInt64(Text);
+            }
+            catch (Exception)
+            {
+                return 0;
             }
         }
 
@@ -73,15 +85,15 @@ namespace SimulacionTP4.Presentacion.Controles
             evento.Handled = true;
         }
 
-        private int CalcularValor()
+        private double CalcularValor()
         {
             if (Text.Length == 0) return 0;
             try
             {
                 if (Text.Contains("."))
-                    return Convert.ToInt32(Text.Replace('.', ','));
+                    return Convert.ToDouble(Text.Replace('.', ','));
 
-                return Convert.ToInt32(Text);
+                return Convert.ToDouble(Text);
             }
             catch (Exception)
             {

@@ -40,7 +40,7 @@
             this.lblNombreCampo.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblNombreCampo.Location = new System.Drawing.Point(0, 0);
             this.lblNombreCampo.Name = "lblNombreCampo";
-            this.lblNombreCampo.Size = new System.Drawing.Size(129, 51);
+            this.lblNombreCampo.Size = new System.Drawing.Size(163, 51);
             this.lblNombreCampo.TabIndex = 0;
             this.lblNombreCampo.Text = "Nombre Campo";
             this.lblNombreCampo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

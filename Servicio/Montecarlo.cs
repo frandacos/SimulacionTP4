@@ -1,29 +1,32 @@
 ﻿using SimulacionTP4.Modelo;
+using System;
 
 namespace SimulacionTP4.Servicio
 {
     public class Montecarlo
     {
         private string[][] filasMostrar;
+        private double[][] puntosGrafica;
         private double ganancia;
         private double media;
 
-        public void Calcular(int iteraciones, int diaDesde, int cantidadDiasMostrar, double precioCompra, double precioVenta, 
+        public void Calcular(long iteraciones, long diaDesde, int cantidadDiasMostrar, double precioCompra, double precioVenta, 
             double precioReventa, bool usarDemandaAnterior, int docenasComprar, bool comprarFaltante, double precioFaltante)
         {           
             Fila actual, previa, temp;
             Generador generador;
             ProbabilidadClima probabilidadClima = new ProbabilidadClima();
-            int diaHasta;
+            long diaHasta;
 
             actual = new Fila();
             previa = new Fila { Dia = 0, Demanda = docenasComprar, GananciaAcumulada = 0, Media = 0 };
             generador = new Generador();
             diaHasta = diaDesde + cantidadDiasMostrar;
 
-            filasMostrar = new string[cantidadDiasMostrar + 1][];
+            filasMostrar = new string[cantidadDiasMostrar][];
+            puntosGrafica = new double[cantidadDiasMostrar][];
 
-            for (int i = 1; i <= iteraciones; i++)
+            for (int i = 1; i < iteraciones; i++)
             {
 
                 actual.Dia = i;
@@ -59,8 +62,11 @@ namespace SimulacionTP4.Servicio
                 actual.GananciaAcumulada = actual.GananciaDiaria + previa.GananciaAcumulada;
                 actual.Media = ((actual.Dia - 1) * previa.Media + actual.GananciaDiaria) / actual.Dia;
 
-                if (diaDesde <= i && i <= diaHasta)
+                if (diaDesde <= i && i < diaHasta)
+                {
                     filasMostrar[i - diaDesde] = actual.GetFila();
+                    puntosGrafica[i - diaDesde] = actual.GetPuntoGrafica();
+                }
 
                 temp = previa;
                 previa = actual;
@@ -71,6 +77,11 @@ namespace SimulacionTP4.Servicio
             media = previa.Media;
         }
 
+        public double[][] GetDatosGrafica()
+        {
+            return puntosGrafica;
+        }
+
         public string[][] GetFilasMostrar()
         {
             return filasMostrar;
@@ -78,12 +89,12 @@ namespace SimulacionTP4.Servicio
 
         public double GetGananciaTotal()
         {
-            return ganancia;
+            return Math.Round(ganancia, 2);
         }
 
         public double GetMedia()
         {
-            return media;
+            return Math.Round(media, 2);
         }
     }
 }
